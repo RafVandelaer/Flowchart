@@ -31,17 +31,30 @@
 </head>
 <body>
 
+<nav>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+
+        <li><a href="blog.html">Blog</a></li>
+
+        <li><a href="news.html">News</a></li>
+    </ul>
+</nav>
+
 <!-- Primary Page Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <div class="container">
+
+    <div id="start">
     <div class="row">
         <div id="welkom" class="twelve columns" style="margin-top: 25%">
             <p >Welkom</p>
         </div>
     </div>
     <div id="startKiezer" class="row">
-        <div id="computer" class="six columns">Ik heb een probleem met een computer <img class="startImages u-max-full-width"  src="images/start/pc.jpg" /></div>
-        <div id="beamer" class="six columns">Ik heb een probleem met een beamer <img id="beamerimage" class="startImages u-max-full-width"  src="images/start/beamer.jpg" /></div>
+        <div id="computer" class="six columns starterclick">Ik heb een probleem met een computer <img class="startImages u-max-full-width"  src="images/start/pc.jpg" /></div>
+        <div id="beamer" class="six columns starterclick">Ik heb een probleem met een beamer <img id="beamerimage" class="startImages u-max-full-width"  src="images/start/beamer.jpg" /></div>
+    </div>
     </div>
 </div>
 <footer>Developed by Raf Vandelaer</footer>
@@ -52,6 +65,8 @@
 <script src="resources/jQuery/jquery-3.1.1.min.js"></script>
 <script>
     $(document).ready(function () {
+        //for developping
+        //skipStart();
         var welkom = $("#welkom");
         welkom.animate({opacity: 1}, 2000, function () {
             welkom.animate({top: "5%", 'margin-top': 0}, 1000, function () {
@@ -61,7 +76,23 @@
         });
 
     });
-    $on.onclick
+    function openNavbar(){
+
+    }
+    $(".starterclick").click(function () {
+
+        var start = $("#start");
+        start.animate({opacity: 0}, 1000, function () {
+                start.hide();
+        });
+
+
+       if(this.id == "computer"){
+
+       }else if(this.id == "beamer"){
+
+       }
+    });
 
 </script>
 </html>
