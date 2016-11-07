@@ -1,0 +1,37 @@
+#welkom{
+    text-align: center;
+    font-size: 40pt;
+    opacity: 0;
+}
+#red{
+    background-color: red;
+}
+#blue{
+    background-color: blue;
+}
+#startKiezer{
+    display: none;
+}
+.startImages {
+    opacity: 1;
+}
+.startImages:hover {
+    opacity: 0.5;
+}
+#beamer{
+    text-align: center;
+
+}
+#beamerimage{
+    padding-top: 91px;
+}
+#computer{
+    text-align: center;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 644px;
+    height: 20px;
+    margin: 0 auto;
+}
