@@ -53,13 +53,33 @@ nav ul li {
     text-align: center;
 }
 
-/* Create a style for the first level items */
+nav{
+    display: none;
+    min-width: 350px;
+}
 nav > ul > li > a {
     font-weight: bold;
     color: #aaa;
-    background-color:#FF0;
     display: block;
     line-height: 2em;
-    padding: 0.5em 1em;
+    padding: 0.5em;
     text-decoration: none;
+}
+nav > ul > li{
+    -webkit-transition: background-color 500ms ease-out;
+    -moz-transition: background-color 500ms ease-out;
+    -o-transition: background-color 500ms ease-out;
+    transition: background-color 500ms ease-out;
+}
+nav > ul > li:hover {
+    background-color: #2AA8A3;
+
+}
+nav > ul > li>a:hover {
+    color: #373737;
+}
+nav ul li:last-of-type{
+    float:right;
+    width:150px;
+    text-align: right;
 }

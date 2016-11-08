@@ -33,11 +33,11 @@
 
 <nav>
     <ul>
-        <li><a href="home.html">Home</a></li>
+        <li><a href="home.html">Computer</a></li>
 
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="blog.html">Beamer</a></li>
 
-        <li><a href="news.html">News</a></li>
+        <li><a target="_blank" href=www.rafvandelaer.be>By Raf Vandelaer</a></li>
     </ul>
 </nav>
 
@@ -57,7 +57,6 @@
     </div>
     </div>
 </div>
-<footer>Developed by Raf Vandelaer</footer>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -67,6 +66,9 @@
     $(document).ready(function () {
         //for developping
         //skipStart();
+        //firstRun for reading json
+        window.firstRun = true;
+        window.json;
         var welkom = $("#welkom");
         welkom.animate({opacity: 1}, 2000, function () {
             welkom.animate({top: "5%", 'margin-top': 0}, 1000, function () {
@@ -76,7 +78,19 @@
         });
 
     });
-    function openNavbar(){
+    function readJSON(element){
+        //on first run we read the json
+            if(window.firstRun) {
+                window.firstRun = false;
+                alert("running");
+                $.getJSON("flow/mainJSON.json", function( data ) {
+                    window.json = data;
+
+                 });
+            }
+        var data = window.json["element"];
+
+
 
     }
     $(".starterclick").click(function () {
@@ -84,10 +98,12 @@
         var start = $("#start");
         start.animate({opacity: 0}, 1000, function () {
                 start.hide();
+            $("nav").show(1000);
         });
 
 
        if(this.id == "computer"){
+           readJSON();
 
        }else if(this.id == "beamer"){
 
