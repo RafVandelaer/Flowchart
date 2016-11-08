@@ -27,6 +27,7 @@ function getElement(element){
         descr.append("<li>"+ obj +"</li>")
     });
     $("#solu").append(task.solu);
+    $("#activeImage").find("img").attr("src", task.images[0])
 }
 // reading the json file, this is only done once, so the web page doesn't use too much resources
 function readJSON(){
