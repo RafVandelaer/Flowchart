@@ -5,6 +5,7 @@
 }
 #red{
     background-color: red;
+
 }
 #blue{
     background-color: blue;
@@ -59,7 +60,7 @@ nav{
 }
 nav > ul > li > a {
     font-weight: bold;
-    color: #aaa;
+    color: #d0d0d0;
     display: block;
     line-height: 2em;
     padding: 0.5em;
@@ -82,4 +83,42 @@ nav ul li:last-of-type{
     float:right;
     width:150px;
     text-align: right;
+}
+#taskContainer{
+    margin-top: 10px;
+    display: none;
+    height: 80vh;
+}
+#imageContainer{
+    height: 78vh;
+    background-color: #34ce1e;
+}
+#explain{
+    height: 78vh;
+    background-color: #ce7d18;
+    margin-left: 0%;
+    padding-left: 4%;
+    border-left: 1px solid #888888;
+    position: relative;
+    overflow: scroll;
+}
+#decisionContainer{
+    background-color: #0FA0CE;
+    height: 8vh;
+}
+#activeImage{
+    background-color: #F1F1F1;
+    height: 85%;
+}
+#images{
+    background-color: darkgreen;
+    height: 15%;
+}
+#solu{
+    bottom: 0;
+    position: absolute;
+
+}
+.fa-check{
+    color: #34ce1e;
 }

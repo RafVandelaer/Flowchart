@@ -26,6 +26,7 @@
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="resources/Skeleton-2.0.4/images/favicon.png">
+    <script src="https://use.fontawesome.com/c0aef14901.js"></script>
 
 
 </head>
@@ -56,60 +57,33 @@
         <div id="beamer" class="six columns starterclick">Ik heb een probleem met een beamer <img id="beamerimage" class="startImages u-max-full-width"  src="images/start/beamer.jpg" /></div>
     </div>
     </div>
+    <div id="taskContainer">
+        <div class="row">
+            <div class="eight columns" id="imageContainer">
+                <div class="row" id="activeImage">1</div>
+                <div class="row" id="images">2</div>
+            </div>
+            <div class="four columns" id="explain">
+                <div>
+                    <h3 id="title"></h3>
+                    <ul id="descr"></ul>
+                </div>
+                <div>
+                    <p id="solu"><i class="fa fa-check" aria-hidden="true"></i></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="twelve columns" id="decisionContainer">
+
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 <script src="resources/jQuery/jquery-3.1.1.min.js"></script>
-<script>
-    $(document).ready(function () {
-        window.firstRun = true;
-        readJSON();
-        //for developping
-        //skipStart();
-        //firstRun for reading json
-        var welkom = $("#welkom");
-        welkom.animate({opacity: 1}, 2000, function () {
-            welkom.animate({top: "5%", 'margin-top': 0}, 1000, function () {
-                $("#startKiezer").fadeIn("slow");
-            });
-
-        });
-
-    });
-    //getting the required element
-    function getElement(element){
-        var task = window.json[element];
-        console.log("We are at task: " + element);
-        //on first run we read the json
-
-    }
-    // reading the json file, this is only done once, so the web page doesn't use too much resources
-    function readJSON(){
-        if(window.firstRun) {
-            window.firstRun = false;
-            $.getJSON("flow/mainJSON.json", function(d) {
-                window.json = d;
-            });
-        }
-    }
-    $(".starterclick").click(function () {
-
-        var start = $("#start");
-        start.animate({opacity: 0}, 1000, function () {
-                start.hide();
-            $("nav").show(1000);
-        });
-
-
-       if(this.id == "computer"){
-           getElement("1.0");
-
-       }else if(this.id == "beamer"){
-
-       }
-    });
-
-</script>
+<script src="jqueryFile.js"></script>
 </html>

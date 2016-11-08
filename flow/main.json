@@ -1,7 +1,10 @@
 {
   "1.0":{
     "title":"Branden de lampjes",
-    "descr":"Wanneer u de computer aanzet, controleer of de lampjes van zowel de computer als het scherm aanzijn.",
+    "descr":[
+      "Wanneer u de computer aanzet, controleer of de lampjes van zowel de computer als het scherm branden.",
+      "Text 2"
+    ],
     "solu":"Controleer of de voedingskabel van beide apparaten. Deze kabels moeten goed vastgeduwd worden.",
     "next":"1.1",
     "images":[
