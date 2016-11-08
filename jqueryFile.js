@@ -55,3 +55,10 @@ $(".starterclick").click(function () {
 
     }
 });
+//scrollbar
+$(window).on("load",function(){
+    $("#explainContainer").mCustomScrollbar({
+        theme:"minimal",
+        axis: "xy"
+    });
+});

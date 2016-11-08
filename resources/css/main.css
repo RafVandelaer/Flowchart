@@ -96,9 +96,9 @@ nav ul li:last-of-type{
 #explainContainer{
     height: 78vh;
     background-color: #ce7d18;
-    margin-left: 0;
+   /*margin-left: 0;
     padding-left: 4%;
-    border-left: 1px solid #888888;
+    border-left: 1px solid #888888;*/
     position: relative;
    overflow: auto;
 }
@@ -109,17 +109,22 @@ nav ul li:last-of-type{
 #activeImage{
     background-color: #F1F1F1;
     height: 85%;
+    border-right: 1px solid #b5b5b5;
 }
 #images{
     background-color: darkgreen;
     height: 15%;
+    border-right: 1px solid #b5b5b5;
 }
 #solu{
     background-color: crimson;
     margin-top: 45px;
+    width:auto;
 }
+
 #explain{
 background-color: chartreuse;
+    width:auto;
 }
 #solution{
     background-color: deeppink;
