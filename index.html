@@ -37,7 +37,7 @@
 
         <li><a href="blog.html">Beamer</a></li>
 
-        <li><a target="_blank" href=www.rafvandelaer.be>By Raf Vandelaer</a></li>
+        <li><a target="_blank" href="http://www.rafvandelaer.be">By Raf Vandelaer</a></li>
     </ul>
 </nav>
 
@@ -64,11 +64,11 @@
 <script src="resources/jQuery/jquery-3.1.1.min.js"></script>
 <script>
     $(document).ready(function () {
+        window.firstRun = true;
+        readJSON();
         //for developping
         //skipStart();
         //firstRun for reading json
-        window.firstRun = true;
-        window.json;
         var welkom = $("#welkom");
         welkom.animate({opacity: 1}, 2000, function () {
             welkom.animate({top: "5%", 'margin-top': 0}, 1000, function () {
@@ -78,20 +78,21 @@
         });
 
     });
-    function readJSON(element){
+    //getting the required element
+    function getElement(element){
+        var task = window.json[element];
+        console.log("We are at task: " + element);
         //on first run we read the json
-            if(window.firstRun) {
-                window.firstRun = false;
-                alert("running");
-                $.getJSON("flow/mainJSON.json", function( data ) {
-                    window.json = data;
 
-                 });
-            }
-        var data = window.json["element"];
-
-
-
+    }
+    // reading the json file, this is only done once, so the web page doesn't use too much resources
+    function readJSON(){
+        if(window.firstRun) {
+            window.firstRun = false;
+            $.getJSON("flow/mainJSON.json", function(d) {
+                window.json = d;
+            });
+        }
     }
     $(".starterclick").click(function () {
 
@@ -103,7 +104,7 @@
 
 
        if(this.id == "computer"){
-           readJSON();
+           getElement("1.0");
 
        }else if(this.id == "beamer"){
 
