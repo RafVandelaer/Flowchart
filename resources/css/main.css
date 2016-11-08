@@ -93,14 +93,14 @@ nav ul li:last-of-type{
     height: 78vh;
     background-color: #34ce1e;
 }
-#explain{
+#explainContainer{
     height: 78vh;
     background-color: #ce7d18;
-    margin-left: 0%;
+    margin-left: 0;
     padding-left: 4%;
     border-left: 1px solid #888888;
     position: relative;
-    overflow: scroll;
+   overflow: auto;
 }
 #decisionContainer{
     background-color: #0FA0CE;
@@ -115,8 +115,14 @@ nav ul li:last-of-type{
     height: 15%;
 }
 #solu{
-    bottom: 0;
-    position: absolute;
+    background-color: crimson;
+    margin-top: 45px;
+}
+#explain{
+background-color: chartreuse;
+}
+#solution{
+    background-color: deeppink;
 
 }
 .fa-check{
