@@ -132,7 +132,7 @@ nav ul li:last-of-type{
 }
 
 #explain{
-background-color: chartreuse;
+    background-color: chartreuse;
     width:auto;
 }
 #solution{
