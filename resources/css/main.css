@@ -137,22 +137,14 @@ nav ul li:last-of-type{
 .fa-check{
     color: #34ce1e;
 }
-#images > table{
-    height: 100%;
-    margin: 0 auto;
-}
-#images > table, td{
-    padding: 0;
-}
+
 /*remove after debug */
-table, th, td {
-    border: 1px solid black;
-}
-#imageTable td img{
-    max-height: 100%;
+
+#images img{
+    /*max-height: 100%;
     display:block;"
-    width:auto;
+    width:auto;*/
     height:100px;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
 
 }

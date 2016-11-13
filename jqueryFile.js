@@ -19,7 +19,7 @@ $(document).ready(function () {
 //getting the required element
 function getElement(element){
 
-    var imageCount = ["twelve","eleven","ten","nine","eight","seven","six","five","four","three","two","one"];
+    var imageCount = ["twelve","six","four","three","twoo","twoo","one"];
     var task = window.json[element];
     console.log("We are at task: " + element);
     //on first run we read the json
@@ -31,18 +31,20 @@ function getElement(element){
     $("#solu").append(task.solu);
     $("#activeImage").find("img").attr("src", task.images[0]);
 
-    var tableRow =  $("#images");
-//TODO: make empty
-    // tableRow.empty();
+    var container =  $("#images");
+
+    container.empty();
     var colums = task.images.length;
     console.log("totall images: " + colums );
     var oneOrMore = "column";
     if(colums > 1){
         oneOrMore = "colums"
     }
+
+    //TODO: make height dynamic, when div is ready
     $.each(task.images, function(i, obj) {
          console.log("An image is added");
-         tableRow.append("<div class='"+ imageCount[colums-1]+ " "  + oneOrMore +"' ><img src='" + obj + "' /></div>");
+        container.append("<img class='"+ imageCount[colums-1]+ " " + oneOrMore+ "' style=height:"+ container.outerHeight() +"px; ' src='" + obj + "'/>");
     });
 
 
