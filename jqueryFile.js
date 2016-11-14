@@ -44,8 +44,12 @@ function getElement(element){
     //TODO: make height dynamic, when div is ready
     $.each(task.images, function(i, obj) {
          console.log("An image is added");
-        container.append("<img class='"+ imageCount[colums-1]+ " " + oneOrMore+ "' style=height:"+ container.outerHeight() +"px; ' src='" + obj + "'/>");
+        container.append("<img class='"+ imageCount[colums-1]+ " " + oneOrMore+ " imageScroll ' src='" + obj + "'/>");
+        $(".imageScroll").css("height", container.outerHeight());
     });
+    container.mCustomScrollbar(
+        {axis:"x"}
+    );
 
 
 
@@ -54,6 +58,12 @@ function getElement(element){
         tableRow.append("<td><img src='" + obj + "' /></td>");
     });*/
 }
+// on click of an image
+$(document).on('click', '.imageScroll',function () {
+    $("#activeImage").find("img").attr("src", $(this).attr("src"));
+
+});
+
 // reading the json file, this is only done once, so the web page doesn't use too much resources
 function readJSON(){
     if(window.firstRun) {
@@ -69,10 +79,13 @@ $(".starterclick").click(function () {
     start.animate({opacity: 0}, 1000, function () {
         start.hide();
         $("nav").show(500, function () {
-            $("#taskContainer").fadeIn("slow");
+            $("#taskContainer").fadeIn("slow", function () {
+                $('.imageScroll').each(function(i, obj) {
+                    $(this).css("height", $('#images').outerHeight());
+                });
+            });
         });
     });
-
 
     if(this.id == "computer"){
         getElement("1.0");

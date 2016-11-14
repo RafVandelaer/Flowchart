@@ -110,6 +110,7 @@ nav ul li:last-of-type{
     background-color: #F1F1F1;
     height: 85%;
     border-right: 1px solid #b5b5b5;
+    text-align: center;
 }
 #activeImage img{
    max-height:100%;
@@ -119,6 +120,7 @@ nav ul li:last-of-type{
     background-color: darkgreen;
     height: 15%;
     border-right: 1px solid #b5b5b5;
+    text-align: center;
 }
 #solu{
     background-color: crimson;
@@ -139,12 +141,9 @@ nav ul li:last-of-type{
 }
 
 /*remove after debug */
-
-#images img{
-    /*max-height: 100%;
-    display:block;"
-    width:auto;*/
-    height:100px;
-    /*margin: 0 auto;*/
+.imageScroll{
+text-align: center;
+    margin-right: 5px;
+    margin-left: 5px;
 
 }
