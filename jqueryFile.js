@@ -41,6 +41,7 @@ function getElement(element){
     });
     var solu =  $("#solu");
     solu.empty();
+    solu.append('<i class="fa fa-check-square" aria-hidden="true"></i>   ')
     solu.append(task.solu);
     console.log(task.solu);
     $("#activeImage").find("img").attr("src", task.images[0]);

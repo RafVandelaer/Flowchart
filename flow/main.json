@@ -13,7 +13,45 @@
     "notSolved":"999.999",
     "nextStep":"1.1"
   },
+  "1.1":{
+    "title":"Error tijdens opstarten",
+    "descr":[
+      "Wanneer u de computer aanzet, krijg ik een zwart scherm met daarop tekst"
+    ],
+    "solu":"Probeer te herstarten. Indien dit niet helpt kan u beste de ICT-Coördinatoren contacteren",
+    "images":[
+      "images/computer/booterror.jpg"
+    ],
+    "notSolved":"999.999",
+    "nextStep":"1.2"
+  },
+  "1.2":{
+    "title":"Aanmelden",
+    "descr":[
+      "Wanneer u uw gebruikersnaam en wachtwoord ingeeft, krijgt u 'Aanmelden niet mogelijk.'"
+    ],
+    "solu":"Controleer of de netwerkkabel insteekt (foto 2). Aan de ingang van de netwerkkabel branden normaal 1 of 2 ledjes. Indien dit niet het geval was, kan u best herstarten alvorens opnieuw aan te melden.",
+    "images":[
+      "images/computer/aanlog.png",
+      "images/computer/UTP.png"
+    ],
+    "notSolved":"9.0",
+    "nextStep":"1.3"
+  },
 
+
+  "9.0":{
+    "title":"Smartschool",
+    "descr":[
+      "Log in op smartschool, via de app of op een andere computer"
+    ],
+    "solu":"In de homepage van smartschool vind u rechts 2 icoontjes (zie foto 1). Als u op het Windows icoontje klikt kan u u eigen wachtwoord resetten",
+    "images":[
+      "images/smartschoolReset.png"
+    ],
+    "notSolved":"999.999",
+    "nextStep":"00"
+  },
 
   "999.999":{
     "title":"Contacteer de ICT coördinator",
@@ -25,6 +63,6 @@
       "images/smartschool.jpg"
     ],
     "notSolved":"999.999",
-    "nextStep":"1.1"
+    "nextStep":"00"
   }
 }
