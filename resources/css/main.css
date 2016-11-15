@@ -91,11 +91,11 @@ nav ul li:last-of-type{
 }
 #imageContainer{
     height: 78vh;
-    background-color: #34ce1e;
+    /*background-color: #34ce1e;*/
 }
 #explainContainer{
     height: 78vh;
-    background-color: #ce7d18;
+    /*background-color: #ce7d18;*/
    /*margin-left: 0;
     padding-left: 4%;
     border-left: 1px solid #888888;*/
@@ -103,11 +103,13 @@ nav ul li:last-of-type{
    overflow: auto;
 }
 #decisionContainer{
-    background-color: #0FA0CE;
+   /* background-color: #0FA0CE;*/
     height: 8vh;
+    text-align: right;
+    font-size: 8vh
 }
 #activeImage{
-    background-color: #F1F1F1;
+   /* background-color: #F1F1F1;*/
     height: 85%;
     border-right: 1px solid #b5b5b5;
     text-align: center;
@@ -117,27 +119,40 @@ nav ul li:last-of-type{
     padding: 25px;
 }
 #images{
-    background-color: darkgreen;
+   /* background-color: darkgreen;*/
     height: 15%;
     border-right: 1px solid #b5b5b5;
     text-align: center;
 }
 #solu{
-    background-color: crimson;
+    /*background-color: crimson;*/
     margin-top: 45px;
     width:auto;
 }
 
 #explain{
-    background-color: chartreuse;
+    /*background-color: chartreuse;*/
     width:auto;
 }
 #solution{
-    background-color: deeppink;
+    /*background-color: deeppink;*/
 
 }
-.fa-check{
+.fa-check-square{
     color: #34ce1e;
+}
+.fa-check{
+    color: #75ce6b;
+    margin-right: 15px;
+}
+.fa-check:hover{
+    color: #04ce07;
+}
+.fa-times{
+    color: #ce5251;
+}
+.fa-times:hover{
+    color: #ce0000;
 }
 
 /*remove after debug */
