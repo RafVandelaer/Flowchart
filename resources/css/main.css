@@ -154,7 +154,17 @@ nav ul li:last-of-type{
 .fa-times:hover{
     color: #ce0000;
 }
+.fa-arrow-left{
+    color: #848383;
+}
+.fa-arrow-left:hover{
+    color: #4b4a4a;
+}
+.backContainer{
+    font-size: 8vh;
+    height: 8vh;
 
+}
 /*remove after debug */
 .imageScroll{
 text-align: center;

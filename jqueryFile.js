@@ -16,19 +16,33 @@ $(document).ready(function () {
     });
 
 });
-//getting the required element
+//getting the required element, adding json to HTML page
 function getElement(element){
 
+
+    var task =window.json[element];
+    var backwards = $(".fa-arrow-left");
+
+    backwards.attr("step", backwards.attr("this"));
+    backwards.attr("this",element);
+
+
     var imageCount = ["twelve","six","four","three","twoo","twoo","one"];
-    var task = window.json[element];
+
+
+
     console.log("We are at task: " + element);
     //on first run we read the json
     $("#title").text(task.title);
     var descr = $("#descr");
+    descr.empty();
     $.each(task.descr, function(i, obj) {
         descr.append("<li>"+ obj +"</li>")
     });
-    $("#solu").append(task.solu);
+    var solu =  $("#solu");
+    solu.empty();
+    solu.append(task.solu);
+    console.log(task.solu);
     $("#activeImage").find("img").attr("src", task.images[0]);
 
     var container =  $("#images");
@@ -37,20 +51,23 @@ function getElement(element){
     var colums = task.images.length;
     console.log("totall images: " + colums );
     var oneOrMore = "column";
-    if(colums > 1){
+    if(colums < 6){
         oneOrMore = "colums"
     }
 
-    //TODO: make height dynamic, when div is ready
-    $.each(task.images, function(i, obj) {
+
+    $.each(task.images, function(i, obj, callback) {
          console.log("An image is added");
         container.append("<img class='"+ imageCount[colums-1]+ " " + oneOrMore+ " imageScroll ' src='" + obj + "'/>");
-        $(".imageScroll").css("height", container.outerHeight());
+        var imageScroll = $(".imageScroll")
+        imageScroll.css("height", container.outerHeight());
+        imageScroll.css("width", "auto");
     });
-    container.mCustomScrollbar(
+   /* container.mCustomScrollbar(
         {axis:"x"}
-    );
-
+    );*/
+    $(".fa-times").attr("step",task.notSolved);
+    $(".fa-check").attr("step",task.nextStep);
 
 
    /* $.each(task.images, function(i, obj) {
@@ -100,4 +117,15 @@ $(window).on("load",function(){
         theme:"minimal",
         axis: "xy"
     });
+});
+
+$("#next").click(function () {
+    getElement($(this).attr("step"));
+});
+$("#cross").click(function () {
+    getElement($(this).attr("step"));
+});
+
+$("#back").click(function () {
+    getElement($(this).attr("step"));
 });

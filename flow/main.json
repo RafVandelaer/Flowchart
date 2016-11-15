@@ -2,17 +2,29 @@
   "1.0":{
     "title":"Branden de lampjes",
     "descr":[
-      "Wanneer u de computer aanzet, controleer of de lampjes van zowel de computer als het scherm branden.",
-      "Text 2"
+      "Wanneer u de computer aanzet, controleer of de lampjes van zowel de computer als het scherm branden."
     ],
     "solu":"Controleer of de voedingskabel van beide apparaten. Deze kabels moeten goed vastgeduwd worden.",
-    "next":"1.1",
     "images":[
       "images/computer/power-button.jpg",
-      "images/computer/wallpaper-photos-61.jpg",
-      "images/computer/JC-sad.jpg"
+      "images/computer/cord.jpg"
 
-    ]
+    ],
+    "notSolved":"999.999",
+    "nextStep":"1.1"
+  },
+
+
+  "999.999":{
+    "title":"Contacteer de ICT coördinator",
+    "descr":[
+      "Dit kan je best via smartschool doen. U kan ook altijd naar hun kantoor gaan."
+    ],
+    "solu":"",
+    "images":[
+      "images/smartschool.jpg"
+    ],
+    "notSolved":"999.999",
+    "nextStep":"1.1"
   }
-
 }
